@@ -67,7 +67,7 @@ const handleSubmit = async (e) => {
       {/* Form Card */}
       <p>Changes for trigger</p>
        <p>Changes for trigger</p>
-
+<p>Change in dev </p>
       <div className="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-md mb-8">
         <img
           src="../public/Ostad.png"
