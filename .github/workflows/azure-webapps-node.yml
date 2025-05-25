@@ -1,4 +1,5 @@
 name: Testing CI 
+
 on:
   push:
     branches: [main]
@@ -16,26 +17,26 @@ jobs:
           MONGO_INITDB_ROOT_USERNAME: ostad
           MONGO_INITDB_ROOT_PASSWORD: ostad
     steps:
-      -name: cheacking Code 
-      uses: actions/checkout@v3
+      - name: cheacking Code 
+        uses: actions/checkout@v3
       
-      -name: node set up
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: node set up
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
       #front end 
-      -name: Intall UI and validate dependency 
-      working-directory: ./OstadUI
-      run: npm install
+      - name: Install UI and validate dependency 
+        working-directory: ./OstadUI
+        run: npm install
       #buid
-      -name: build UI
-      working-directory: ./OstadUI
-      run: npm run build
+      - name: build UI
+        working-directory: ./OstadUI
+        run: npm run build
 
-      -name:Buid Container from image 
-      run: |
-          docker build -f Dockerfile-UI -t OstadUI
+      - name: Buid Container from image 
+        run: |
+          docker build -f Dockerfile-UI -t OstadUI .
       
 
-      -name: show Success message 
-      run: echo "Build Success.."
+      - name: show Success message 
+        run: echo "Build Success.."
