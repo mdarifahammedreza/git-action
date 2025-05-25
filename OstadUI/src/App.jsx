@@ -65,6 +65,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-yellow-200 p-6 flex gap-10 justify-center items-center ">
       {/* Form Card */}
+      <p>Changes for trigger</p>
       <div className="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-md mb-8">
         <img
           src="../public/Ostad.png"
