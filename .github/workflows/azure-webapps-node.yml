@@ -37,7 +37,7 @@ jobs:
         run: npm run build
 
       - name: Build Docker container
-        run: docker build -f Dockerfile-UI -t OstadUI .
+        run: docker build -f Dockerfile-UI -t ostadui .
 
       - name: Show success message
         run: echo "✅ Build Success.."
